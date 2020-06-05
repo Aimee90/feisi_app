@@ -1,0 +1,78 @@
+@import '@/theme.scss';
+.content{
+	font-size: $size-xsm;
+}
+.m-summarise{
+	padding-left: 14px;
+	color: $grayfont;
+}
+.m-list{
+	max-height: 460rpx;
+}
+
+.m-title{
+	font-size: $size-lg;
+	padding-bottom: 14px;
+}
+.m-block{
+	position: relative;
+	.rt{
+		position: absolute;
+		right: 0;
+		top: 0;
+	}
+}
+.m-info{
+	position: relative;
+	.m-info-item{
+		position: relative;
+		display: flex;
+		justify-content: flex-start;
+		line-height: 22px;
+		&>text{
+			&:first-child{
+				width: 98px;
+				&::before{
+					content: attr(data-icon);
+				}
+				&::after{
+					content: ':';
+				}
+			}
+			&:last-child{
+			}
+		}
+	}
+	.m-tag{
+		padding: 0 10px;
+		border-radius: 10px;
+		position: absolute;
+		top: 45%;
+		right: 0;
+		&.info{
+			color: rgb(101, 199, 179);
+			background-color: rgb(217, 243, 239);
+		}
+		&.danger{
+			color: rgb(255, 103, 98);
+			background-color: rgb(247, 220, 220);
+		}
+	}
+}
+
+.m-footer{
+	padding-top: 10px;
+	margin-top: 10px;
+	&.border{
+		border-top: 1px solid $border;
+	}
+	.m-footer-item{
+		margin-right: 20px;
+	}
+}
+.m-radius{
+	padding: 0 14px;
+	border-radius: 14px;
+	color: rgb(141, 213, 243);
+	background-color: rgb(228, 245, 252);
+}

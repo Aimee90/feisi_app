@@ -1,0 +1,126 @@
+@import 'theme.scss';
+@import  '@/components/m-font/font.scss';
+/* 每个页面公共css */
+page {
+	min-height: 100%;
+	display: flex;
+	font-size: 14px;
+	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/* #ifdef MP-BAIDU */
+page {
+	width: 100%;
+	height: 100%;
+	display: block;
+}
+
+swan-template {
+	width: 100%;
+	min-height: 100%;
+	display: flex;
+}
+
+/* 原生组件模式下需要注意组件外部样式 */
+custom-component {
+	width: 100%;
+	min-height: 100%;
+	display: flex;
+}
+
+/* #endif */
+
+/* #ifdef MP-ALIPAY */
+page {
+	min-height: 100vh;
+}
+
+/* #endif */
+
+/* 原生组件模式下需要注意组件外部样式 */
+m-input {
+	width: 100%;
+	/* min-height: 100%; */
+	display: flex;
+	flex: 1;
+}
+
+.content {
+	font-size: 14px;
+	display: flex;
+	flex: 1;
+	flex-direction: column;
+	background-color: #FFF;
+	padding: 10px;
+}
+
+.no-padding {
+	padding: unset;
+}
+.no-margin {
+	margin: unset;
+}
+
+
+
+.input-group {
+	background-color: #ffffff;
+	margin-top: 20px;
+	position: relative;
+}
+
+.input-row {
+	display: flex;
+	flex-direction: row;
+	position: relative;
+	font-size: 18px;
+	line-height: 40px;
+}
+
+.input-row .title {
+	width: 72px;
+	padding-left: 15px;
+}
+
+.input-row.border::after {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	left: 8px;
+	height: 1px;
+	content: '';
+	-webkit-transform: scaleY(.5);
+	transform: scaleY(.5);
+	background-color: #c8c7cc;
+}
+
+button.primary {
+	background-color: $btncolor;
+}
+
+button.btn-base{
+	background-color: $btncolor;
+}
+
+button.btn-clicked{
+	background-color: $btnclicked;
+}
+// functional styles
+.solid-border{
+	border-bottom: 1px solid $border;
+}
+.dash-border{
+	border-bottom: 1px solid $border;
+}
+.m-bold{
+	font-weight: 700;
+}
+.f-gray-dark{
+	color: rgb(144, 160, 190);
+}
+.f-gray-light{
+	color: rgb(200, 209, 230);
+}
+.f-tip-danger{
+	color: rgb(245, 133, 133);
+}

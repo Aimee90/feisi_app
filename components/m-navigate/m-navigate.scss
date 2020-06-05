@@ -1,0 +1,38 @@
+@import '@/theme.scss';
+.m-navigate{
+	width: 100%;
+	padding-top: 25px;
+	text-align: center;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 999;
+	background-color: $navcolor;
+	input{
+		width: 90%;
+		height: 30px;
+		border-radius: 4px;
+		margin: auto;
+		border: 1px solid $border;
+		background-color: #FFF;
+	}
+}
+.search-icon{
+	position: absolute;
+	top: 30px;
+	left: 8%;
+}
+.m-columms{
+	display: flex;
+	justify-content: flex-start;
+}
+.m-picker{
+	width: 33.33%;
+	padding: 10px;
+}
+
+@for $i from 1 to 4 {
+	.columm-#{$i}-item{
+		width: percentage(1/$i);
+	}
+}

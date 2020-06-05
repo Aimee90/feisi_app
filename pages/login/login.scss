@@ -1,0 +1,62 @@
+@import '~@/theme.scss';
+
+.action-row {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
+.m-login-input::before{
+	content: attr(data-label);
+	color: $grayfont;
+	width: 25%;
+	font-size: $size-md;
+}
+.m-checkbox{
+	color: $base;
+}
+.login-header{
+	&>.back{
+		background-color: $base;
+		width: 100%;
+		height: 250rpx;
+	}
+	&>.logo{
+		margin: auto;
+		width: 150rpx;
+		height: 150rpx;
+		text-align: center;
+		background-color: #efefef;
+		border: 1px solid #efefef;
+		border-radius: 75rpx;
+		position: relative;
+		top: -75rpx;
+	}
+	&>.title{
+		text-align: center;
+		font-size: 22px;
+	}
+}
+.login-form{
+	padding: 0 100rpx;
+	.input-row{
+		margin: 40px 0;
+		border-bottom: 1px solid $base;
+	}
+	.btn-row{
+		padding-top: 100rpx;
+	}
+	.btn-base{
+		font-size: $size-md;
+		height: 34px;
+		line-height: 34px;
+		border-radius: 15px;
+	}
+}
+.m-checkbox{
+	position: absolute;
+	bottom: -90rpx;
+	right: -40rpx;
+	transform:scale(0.7);
+}
+ 
