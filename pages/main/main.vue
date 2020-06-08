@@ -1,15 +1,22 @@
 <template>
 	<view class="content no-padding">
-		<cover-view class="m-cover-view">
-			<view>
-				<input class="uni-input" confirm-type="search" placeholder="请输入机编号/SIM卡号/终端编号" />
-				<uni-icons class="search-icon" type="search" size="20" color="#FFD302"></uni-icons>
-			</view>
-			<view>
+		<view class="m-navigate">
+			<input class="uni-input" confirm-type="search" placeholder="请输入机编号/SIM卡号/终端编号"/>
+			<uni-icons class="search-icon" type="search" size="20" color="#FFD302"></uni-icons>
+			<view class="m-columms">
+				<m-fab
+				class="m-u-fab"
+				:content="content"
+				vertical="top"
+				:popMenu="true">
 				
+				</m-fab>
 			</view>
-		</cover-view>
-		<view class="m-map">
+		</view>
+		<view class="m-show-cover">
+			
+		</view>
+		<view class="m-map" style="width: 100%;height: 100%;">
 			<map class="map-view" :style="mapStyle"></map>
 		</view>
 	</view>
@@ -20,7 +27,30 @@
 		mapState
 	} from 'vuex'
 
+	import mFab from '@/components/m-fab/m-fab.vue'
 	export default {
+		name: 'Main',
+		data(){
+			return {
+				content: [
+					{
+						count: 123,
+						text: '车辆总数',
+						active: false
+					},
+					{
+						count: 123,
+						text: '当前在线数',
+						active: false
+					},
+					{
+						count: 123,
+						text: '当前离线数',
+						active: false
+					}
+				]
+			}
+		},
 		computed: {
 			...mapState(['forcedLogin', 'hasLogin', 'userName']),
 			mapStyle(){
@@ -31,7 +61,6 @@
 			}
 		},
 		onLoad() {
-			console.log('----------',uni.windowHeight)
 			if (!this.hasLogin) {
 				uni.showModal({
 					title: '未登录',
@@ -58,15 +87,21 @@
 					}
 				});
 			}
-		}
+		},
+		components: mFab
 	}
 </script>
 
 <style lang="scss">
+	@import '@/components/m-navigate/m-navigate.scss';
 	.map-view{
 		min-height: 700px;
 	}
-	.m-map{
-		display: flex;
+	.m-navigate{
+		background-color: rgba($color: #FFF, $alpha: 0.1);
+		z-index: 999999999;
+	}
+	.m-u-fab{
+
 	}
 </style>
