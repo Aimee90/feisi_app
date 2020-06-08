@@ -1,0 +1,12 @@
+	.uni-row{
+		margin-bottom: 18px;
+	}
+	.title{
+		line-height: 32px;
+	}
+	.content{
+		
+		/deep/ uni-view{
+			font-size: 14px !important;
+		}
+	}

@@ -33,7 +33,7 @@
 					</view>
 					<text class="m-tag info">已解除</text>
 				</view>
-				<navigator  class="m-block m-footer border" :url="`../basic/basic?vin=`+item.vin">
+				<navigator  class="m-block m-footer border" url="../detail/detail">
 					<view class="m-footer-item f-gray-dark" style="">
 						<uni-icons type="location-filled" size="18" color="#64CC7A"></uni-icons>
 						<text>{{item.address}}</text>

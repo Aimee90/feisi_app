@@ -1,5 +1,7 @@
 	@import '@/theme.scss';
+	$labelcolor: rgb(250, 250, 251);
 	.m-collapse{
+		width: 100%;
 		/deep/ .uni-collapse-cell__title{
 			background-color: #FFF;
 		}
@@ -8,10 +10,18 @@
 		padding: 10px;
 		display: flex;
 		justify-content: space-between;
-		.title{
-			width: 100px;
-			display: inline-block;
+		&.space-out{
+			text:nth-child(2n+1){
+				background-color: $labelcolor;
+			}
+			text:nth-child(2n){
+				background-color: #FFF;
+			}
 		}
+		&:nth-child(2n+1){
+			background-color: $labelcolor;
+		}
+		
 		&:nth-child(2n){
 			background-color: #FFF;
 		}

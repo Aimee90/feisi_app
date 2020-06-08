@@ -1,5 +1,5 @@
 <template>
-	<view class="content m-collapse">
+	<view class="m-collapse">
 		<uni-collapse :accordion="true">
 			 <uni-collapse-item title="基础信息" open>
 				<scroll-view class="m-collapse-row" 

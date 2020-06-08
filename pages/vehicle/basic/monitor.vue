@@ -1,15 +1,15 @@
 <template>
-	<view class="content m-collapse">
+	<view class="m-collapse">
 		<uni-collapse>
 			<uni-collapse-item title="位置数据" open>
-				<!-- <map style="width: 100%; height: 300px;"></map> -->
-				<view class="m-collapse-row location" >
+				<map style="width: 100%; height: 300px;"></map>
+				<view class="m-collapse-row space-out location" >
 					<text>经度</text>
 					<text>{{data.lastLat}}</text>
 					<text>纬度</text>
 					<text>{{data.lastLon}}</text>
 				</view>
-				<view class="m-collapse-row address" >
+				<view class="m-collapse-row space-out address" >
 					<text>位置</text>
 					<text>{{data.gpsAddress}}</text>
 				</view>
@@ -90,15 +90,6 @@
 				flex: 1;
 				text-align: right;
 				padding-right: 10px;
-			}
-		}
-	}
-	.location, .address{
-		text{
-			&:nth-child(2n){
-				background-color: #FFF;
-				text-align: left;
-				padding-left: 10px;
 			}
 		}
 	}

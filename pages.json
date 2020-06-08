@@ -36,7 +36,9 @@
         }
         ,{
             "path" : "pages/vehicle/monitor/monitor",
-            "style" : {}
+            "style" : {
+				"navigationBarTitleText": "报警详情"
+			}
         }
         ,{
             "path" : "pages/vehicle/basic/basic",
@@ -48,6 +50,30 @@
             "path" : "pages/fault/list/list",
             "style" : {
 				"navigationStyle": "custom"
+			}
+        },
+		{
+		    "path" : "pages/user/messages/messages",
+		    "style" : {
+				"navigationBarTitleText": "我的消息"
+			}
+		}
+		,{
+		    "path" : "pages/user/setting/setting",
+		    "style" : {
+				"navigationBarTitleText": "设置"
+			}
+		}
+		,{
+		    "path" : "pages/user/resetpwd/resetpwd",
+		    "style" : {
+				"navigationBarTitleText": "修改密码"
+			}
+		}
+        ,{
+            "path" : "pages/fault/detail/detail",
+            "style" : {
+				"navigationBarTitleText": "故障详情"
 			}
         }
     ],

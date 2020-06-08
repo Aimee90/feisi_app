@@ -1,6 +1,17 @@
 <template>
 	<view class="content no-padding">
-		首页
+		<cover-view class="m-cover-view">
+			<view>
+				<input class="uni-input" confirm-type="search" placeholder="请输入机编号/SIM卡号/终端编号" />
+				<uni-icons class="search-icon" type="search" size="20" color="#FFD302"></uni-icons>
+			</view>
+			<view>
+				
+			</view>
+		</cover-view>
+		<view class="m-map">
+			<map class="map-view" :style="mapStyle"></map>
+		</view>
 	</view>
 </template>
 
@@ -10,8 +21,17 @@
 	} from 'vuex'
 
 	export default {
-		computed: mapState(['forcedLogin', 'hasLogin', 'userName']),
+		computed: {
+			...mapState(['forcedLogin', 'hasLogin', 'userName']),
+			mapStyle(){
+				return {
+					width: '100%',
+					height: uni.windowHeight+'px'
+				}
+			}
+		},
 		onLoad() {
+			console.log('----------',uni.windowHeight)
 			if (!this.hasLogin) {
 				uni.showModal({
 					title: '未登录',
@@ -43,5 +63,10 @@
 </script>
 
 <style lang="scss">
-	
+	.map-view{
+		min-height: 700px;
+	}
+	.m-map{
+		display: flex;
+	}
 </style>

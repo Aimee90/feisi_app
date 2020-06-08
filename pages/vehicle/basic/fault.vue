@@ -1,7 +1,7 @@
 <template>
 	<scroll-view class="m-card-list">
 		<uni-card class="m-list" v-for="(item, index) in data" :key="index">
-		    <navigator class="m-block m-title" :url="`../basic/basic?vin=`+item.vin">
+		    <navigator class="m-block m-title" :url="`../monitor/monitor`">
 				<text class="m-radius">{{beginTime(item.beginTime)}}</text>
 				<view class="rt">
 					<text class="iconfont f-gray-dark">&#xe64c;</text>

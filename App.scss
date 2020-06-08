@@ -1,3 +1,4 @@
+// @import 'uni.css';
 @import 'theme.scss';
 @import  '@/components/m-font/font.scss';
 /* 每个页面公共css */
@@ -55,10 +56,10 @@ m-input {
 }
 
 .no-padding {
-	padding: unset;
+	padding: unset !important;
 }
 .no-margin {
-	margin: unset;
+	margin: unset !important;
 }
 
 
@@ -123,4 +124,9 @@ button.btn-clicked{
 }
 .f-tip-danger{
 	color: rgb(245, 133, 133);
+}
+.btn-fixed{
+	position: fixed;
+	width: 96%;
+	bottom: 50px;
 }
